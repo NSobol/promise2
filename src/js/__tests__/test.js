@@ -14,11 +14,3 @@ test('Получение корректных данных', async () => {
   const response = await GameSavingLoader.load();
   expect(response).toEqual(receivedValue);
 });
-
-test('Возращает ошибку', async () => {
-  try {
-    await GameSavingLoader.load();
-  } catch (err) {
-    expect(err).toBe('Ошибка чтения данных');
-  }
-});
